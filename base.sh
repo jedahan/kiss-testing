@@ -25,14 +25,5 @@ buildah config \
   $kiss_container
 echo ERROR will happen in following command
 buildah run $kiss_container kiss update
-echo WOMP WOMP
 echo TODO: gpg verification
 buildah run $kiss_container bash
-
-#RUN sed -i "s/\/dev\/tty/\/dev\/null/g" /sbin/kiss
-#RUN kiss build gnupg1 && kiss install gnupg1
-#RUN gpg --keyserver keys.gnupg.net --recv-key 46D62DD9F1DE636E \
-#  || gpg --keyserver pgp.mit.edu --recv-key 46D62DD9F1DE636E
-#RUN echo trusted-key 0x46d62dd9f1de636e >> /root/.gnupg/gpg.conf
-#WORKDIR /usr/repos/official
-#RUN git config merge.verifySignatures true
