@@ -8,9 +8,7 @@ curl --location --silent --remote-name $kiss_chroot_uri/$kiss_chroot_file
 curl --location --silent $kiss_chroot_uri/$kiss_chroot_file.sha256 | sha256sum -c
 echo TODO: key verification
 cp $kiss_chroot_file $kiss_mount/
-cd $kiss_mount
-tar xf $kiss_chroot_file
-cd -
+tar x -C $kiss_mount -f $kiss_chroot_file
 buildah commit $kiss_container kiss
 buildah tag localhost/kiss 2021.7.6
 buildah unmount $kiss_container
