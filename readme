@@ -2,4 +2,4 @@ The beginning of some build testing
 
 Requires buildah, curl, tar, sha256sum
 
-    ./run.sh
+    buildah unshare ./base.sh

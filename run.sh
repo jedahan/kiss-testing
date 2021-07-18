@@ -1,1 +1,0 @@
-buildah unshare ./base.sh
